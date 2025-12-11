@@ -54,4 +54,31 @@ for (int i = 0; i <= row; i++)
 }
 */
 
+// 3
+/*
+Генерація простих чисел: Напишіть програму, яка генерує прості числа від 1 до заданого користувачем числа. 
+Просте число - це число, яке ділиться лише на 1 і на себе.
+*/
+
+Console.WriteLine("Enter a number:");
+int number = Convert.ToInt32(Console.ReadLine());
+
+for (int i = 2; i <= number; i++)
+{
+    bool isPrime = true;
+
+    for (int j = 2; j < i; j++)
+    {
+        if (i % j == 0)
+        {
+            isPrime = false;
+            break;
+
+        }
+    }
+
+    if (isPrime) Console.WriteLine(i);
+
+}
+
 
