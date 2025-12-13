@@ -90,6 +90,7 @@ for (int i = 2; i <= number; i++)
 Після введення значень програма має обчислити та вивести оплату за день.
 */
 
+/*
 bool isLastEmployee = false;
 var userInput = "";
 bool isProperHoursInput = false;
@@ -126,7 +127,35 @@ do
     }
 
 } while (!isLastEmployee);
+*/
 
+
+// 6
+/*
+Генерація таблиці множення для конкретного числа: 
+Напишіть програму, яка запитує в користувача число, а потім генерує таблицю множення для цього числа від 1 до 10.
+*/
+
+/*
+var integer = 0;
+bool isProperInteger = false;
+var result = 0;
+
+do
+{
+    Console.WriteLine("Enter any integer:");
+    var userInput = Console.ReadLine();
+    isProperInteger = int.TryParse(userInput, out integer);
+
+
+} while (!isProperInteger);
+
+for (int i = 1; i <= 10; i++)
+{
+    result = i * integer;
+    Console.WriteLine($"{i} * {integer} = {result};");
+}
+*/
 
 
 
