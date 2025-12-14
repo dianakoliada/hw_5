@@ -163,7 +163,7 @@ for (int i = 1; i <= 10; i++)
 Перевірка на простоту: Напишіть програму, яка перевіряє, чи є задане користувачем число простим. 
 Число вважається простим, якщо воно ділиться лише на 1 і на себе.
 */
-
+/*
 var integer = 0;
 bool isValidInteger = false;
 bool isPrime = true;
@@ -198,7 +198,39 @@ if (isPrime)
     Console.WriteLine("The integer is Prime!");
 }
 else Console.WriteLine("The integer is not Prime!");
+*/
 
+
+//====================================================================================================
+// 4
+/*
+Генерація фібоначчівської послідовності: Напишіть програму, яка генерує перші N чисел Фібоначчі. 
+Послідовність Фібоначчі починається з 0 і 1, а кожне наступне число є сумою двох попередніх чисел у послідовності.
+*/
+
+int previousNum = 0;
+int nextNum = 1;
+int result = 0;
+var input = 0;
+bool isValidInput = false;
+
+do
+{
+    Console.WriteLine("Enter any integer higher than 2:");
+    var userInput = Console.ReadLine();
+    isValidInput = int.TryParse(userInput, out input);
+} while (!isValidInput || input < 2);
+
+Console.WriteLine(previousNum);
+Console.WriteLine(nextNum);
+
+for (int i = 0; i < input - 2; i++)
+{
+    result = previousNum + nextNum;
+    previousNum = nextNum;
+    nextNum = result;
+    Console.WriteLine(result);
+}
 
 
 
